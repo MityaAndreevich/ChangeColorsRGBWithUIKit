@@ -82,9 +82,19 @@
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eZJ-aq-8xn">
                                                 <rect key="frame" x="-2" y="38" width="91.5" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="changeColorForGreen" destination="BYZ-38-t0r" eventType="valueChanged" id="vsZ-BL-SRe"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-4C-kQv">
                                                 <rect key="frame" x="-2" y="76" width="91.5" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="changeColorForBlue" destination="BYZ-38-t0r" eventType="valueChanged" id="5yc-1s-aI1"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -107,6 +117,8 @@
                         <outlet property="blueMeasure" destination="OXb-ZW-tHU" id="rj0-Oh-eP4"/>
                         <outlet property="greenMeasure" destination="QdU-Xg-Vwq" id="EbO-TC-oNX"/>
                         <outlet property="redMeasure" destination="sbj-tN-FPT" id="CRw-X0-MsG"/>
+                        <outlet property="sliderForBlue" destination="Qxh-4C-kQv" id="qrd-9X-83a"/>
+                        <outlet property="sliderForGreen" destination="eZJ-aq-8xn" id="ASJ-Oo-4Su"/>
                         <outlet property="sliderForRed" destination="fOK-hT-hRe" id="Xkh-dp-fb0"/>
                         <outlet property="viewOfColor" destination="bI9-B6-yNj" id="tx6-g1-gvd"/>
                     </connections>
@@ -119,6 +131,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueMeasure: UILabel!
     
     @IBOutlet weak var sliderForRed: UISlider!
+    @IBOutlet weak var sliderForGreen: UISlider!
+    @IBOutlet weak var sliderForBlue: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeRedColorSlider() {
-        
         //viewOfColor.backgroundColor = .red(sliderForRed.value)
         redMeasure.text = String(sliderForRed.value)
     }
     
+    @IBAction func changeColorForGreen() {
+        greenMeasure.text = String(sliderForGreen.value)
+    }
+    
+    @IBAction func changeColorForBlue() {
+        blueMeasure.text = String(sliderForBlue.value)
+    }
 }
 
