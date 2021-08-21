@@ -28,14 +28,19 @@ class ViewController: UIViewController {
     @IBAction func changeRedColorSlider() {
         //viewOfColor.backgroundColor = .red(sliderForRed.value)
         redMeasure.text = String(sliderForRed.value)
+        let redSliderValue = CGFloat(sliderForRed.value)
+        viewOfColor.backgroundColor = UIColor(red: redSliderValue, green: 0, blue: 0, alpha: 1)
     }
     
     @IBAction func changeColorForGreen() {
         greenMeasure.text = String(sliderForGreen.value)
+        let greenMeasureValue = CGFloat(sliderForGreen.value)
+        viewOfColor.backgroundColor = UIColor(red: 0, green: greenMeasureValue, blue: 0, alpha: 1)
     }
     
     @IBAction func changeColorForBlue() {
         blueMeasure.text = String(sliderForBlue.value)
     }
+    
 }
 
