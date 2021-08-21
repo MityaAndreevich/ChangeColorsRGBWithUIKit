@@ -23,23 +23,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewOfColor.layer.cornerRadius = 10
         
+        sliderForRed.value = 0.5
+        sliderForGreen.value = 0.25
+        sliderForBlue.value = 0
+        
         redMeasure.text = String(sliderForRed.value)
         greenMeasure.text = String(sliderForGreen.value)
         blueMeasure.text = String(sliderForBlue.value)
     }
     //MARK: - IB Actions
     @IBAction func changeColorForRed() {
-        redMeasure.text = String(sliderForRed.value)
+        redMeasure.text = String(format: "%.2f", sliderForRed.value)
         summarizeSliderValues()
     }
     
     @IBAction func changeColorForGreen() {
-        greenMeasure.text = String(sliderForGreen.value)
+        greenMeasure.text = String(format: "%.2f", sliderForGreen.value)
         summarizeSliderValues()
     }
     
     @IBAction func changeColorForBlue() {
-        blueMeasure.text = String(sliderForBlue.value)
+        blueMeasure.text = String(format: "%.2f", sliderForBlue.value)
         summarizeSliderValues()
     }
     //MARK: - Private Methods
