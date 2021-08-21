@@ -74,6 +74,11 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-hT-hRe">
                                                 <rect key="frame" x="-2" y="0.0" width="91.5" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="maximumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="changeRedColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="8dm-xd-6YF"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eZJ-aq-8xn">
                                                 <rect key="frame" x="-2" y="38" width="91.5" height="31"/>
@@ -98,6 +103,13 @@
                             <constraint firstItem="bI9-B6-yNj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rU7-hC-976"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueMeasure" destination="OXb-ZW-tHU" id="rj0-Oh-eP4"/>
+                        <outlet property="greenMeasure" destination="QdU-Xg-Vwq" id="EbO-TC-oNX"/>
+                        <outlet property="redMeasure" destination="sbj-tN-FPT" id="CRw-X0-MsG"/>
+                        <outlet property="sliderForRed" destination="fOK-hT-hRe" id="Xkh-dp-fb0"/>
+                        <outlet property="viewOfColor" destination="bI9-B6-yNj" id="tx6-g1-gvd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
