@@ -21,8 +21,11 @@ class ViewController: UIViewController {
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewOfColor.layer.cornerRadius = 10
+        
+        redMeasure.text = String(sliderForRed.value)
+        greenMeasure.text = String(sliderForGreen.value)
+        blueMeasure.text = String(sliderForBlue.value)
     }
     //MARK: - IB Actions
     @IBAction func changeColorForRed() {
