@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         blueMeasure.text = String(sliderForBlue.value)
         summarizeSliderValues()
     }
-    //MARK: - Public Methods
-    func summarizeSliderValues() {
+    //MARK: - Private Methods
+    private func summarizeSliderValues() {
         let redValue = CGFloat(sliderForRed.value)
         let greenValue = CGFloat(sliderForGreen.value)
         let blueValue = CGFloat(sliderForBlue.value)
