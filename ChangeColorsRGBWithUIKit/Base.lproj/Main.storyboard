@@ -83,7 +83,7 @@
                                                 <color key="minimumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="maximumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
-                                                    <action selector="changeColorForSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="8dm-xd-6YF"/>
+                                                    <action selector="changeColorForSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="dMu-7n-Img"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eZJ-aq-8xn">
@@ -91,7 +91,7 @@
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="changeColorForSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="n0k-Qf-8Ih"/>
+                                                    <action selector="changeColorForSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ndu-6w-zHm"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-4C-kQv">
@@ -99,7 +99,7 @@
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="changeColorForSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="1k4-kF-tHZ"/>
+                                                    <action selector="changeColorForSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="n2x-Kr-9rB"/>
                                                 </connections>
                                             </slider>
                                         </subviews>

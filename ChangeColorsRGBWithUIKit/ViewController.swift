@@ -31,10 +31,15 @@ class ViewController: UIViewController {
         summarizeSliderValues()
     }
     //MARK: - IB Actions
-    @IBAction func changeColorForSliders() {
-        
-        setValue(for: redMeasure, greenMeasure, blueMeasure)
-        
+    @IBAction func changeColorForSliders(_ sender: UISlider) {
+        switch sender {
+        case sliderForRed:
+            redMeasure.text = string(from: sliderForRed)
+        case sliderForGreen:
+            greenMeasure.text = string(from: sliderForGreen)
+        default:
+            blueMeasure.text = string(from: sliderForBlue)
+        }
         summarizeSliderValues()
     }
     
