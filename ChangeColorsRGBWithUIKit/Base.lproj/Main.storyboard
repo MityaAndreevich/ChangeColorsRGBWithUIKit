@@ -23,62 +23,63 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mWF-0U-29e">
                                 <rect key="frame" x="16" y="118" width="288" height="104"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-de-hKa">
-                                        <rect key="frame" x="0.0" y="6.5" width="91" height="91"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XTv-49-DB3">
+                                        <rect key="frame" x="0.0" y="6.5" width="42" height="91"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XTv-49-DB3">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="91"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv1-Sn-2qn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtL-XT-Vfd">
-                                                        <rect key="frame" x="0.0" y="37" width="47" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-pc-Tfn">
-                                                        <rect key="frame" x="0.0" y="74" width="47" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9rT-o6-blh">
-                                                <rect key="frame" x="54" y="0.0" width="37" height="91"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-tN-FPT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdU-Xg-Vwq">
-                                                        <rect key="frame" x="0.0" y="37" width="37" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-ZW-tHU">
-                                                        <rect key="frame" x="0.0" y="74" width="37" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv1-Sn-2qn">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtL-XT-Vfd">
+                                                <rect key="frame" x="0.0" y="37" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-pc-Tfn">
+                                                <rect key="frame" x="0.0" y="74" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="rfx-7a-cJe"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9rT-o6-blh">
+                                        <rect key="frame" x="58" y="6.5" width="27.5" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-tN-FPT">
+                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdU-Xg-Vwq">
+                                                <rect key="frame" x="0.0" y="37" width="27.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-ZW-tHU">
+                                                <rect key="frame" x="0.0" y="74" width="27.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27.329999923706055" id="k8K-Tf-jnJ"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mYM-jq-7vb">
-                                        <rect key="frame" x="107" y="0.0" width="181" height="104"/>
+                                        <rect key="frame" x="101.5" y="0.0" width="186.5" height="104"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-hT-hRe">
-                                                <rect key="frame" x="-2" y="0.0" width="185" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="190.5" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="maximumTrackTintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
@@ -86,7 +87,7 @@
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eZJ-aq-8xn">
-                                                <rect key="frame" x="-2" y="37" width="185" height="31"/>
+                                                <rect key="frame" x="-2" y="37" width="190.5" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
@@ -94,7 +95,7 @@
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-4C-kQv">
-                                                <rect key="frame" x="-2" y="74" width="185" height="31"/>
+                                                <rect key="frame" x="-2" y="74" width="190.5" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
@@ -107,12 +108,10 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="mWF-0U-29e" firstAttribute="top" secondItem="bI9-B6-yNj" secondAttribute="bottom" constant="29.5" id="AVJ-di-YJ4"/>
-                            <constraint firstItem="9rT-o6-blh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.115625" id="OLb-On-AgX"/>
                             <constraint firstAttribute="trailing" secondItem="mWF-0U-29e" secondAttribute="trailing" constant="16" id="VIS-em-1a1"/>
-                            <constraint firstItem="XTv-49-DB3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.146875" id="Vmq-nx-aE1"/>
                             <constraint firstItem="bI9-B6-yNj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="buT-kG-nm7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bI9-B6-yNj" secondAttribute="trailing" constant="16" id="g0c-hq-dcj"/>
                             <constraint firstItem="bI9-B6-yNj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.142708" id="jdW-rw-cYt"/>
@@ -136,6 +135,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
