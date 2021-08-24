@@ -27,31 +27,39 @@ class ViewController: UIViewController {
         sliderForGreen.value = 0.25
         sliderForBlue.value = 0
         
-        redMeasure.text = String(sliderForRed.value)
-        greenMeasure.text = String(sliderForGreen.value)
-        blueMeasure.text = String(sliderForBlue.value)
-        
+        setValue(for: redMeasure, greenMeasure, blueMeasure)
         summarizeSliderValues()
     }
     //MARK: - IB Actions
     @IBAction func changeColorForSliders() {
-        redMeasure.text = string(from: sliderForRed)
-        greenMeasure.text = string(from: sliderForGreen)
-        blueMeasure.text = string(from: sliderForBlue)
+        
+        setValue(for: redMeasure, greenMeasure, blueMeasure)
+        
         summarizeSliderValues()
     }
     
     //MARK: - Private Methods
     private func summarizeSliderValues() {
-        let redValue = CGFloat(sliderForRed.value)
-        let greenValue = CGFloat(sliderForGreen.value)
-        let blueValue = CGFloat(sliderForBlue.value)
+       
         viewOfColor.backgroundColor = UIColor(
-            red: redValue,
-            green: greenValue,
-            blue: blueValue,
+            red: CGFloat(sliderForRed.value),
+            green: CGFloat(sliderForGreen.value),
+            blue: CGFloat(sliderForBlue.value),
             alpha: 1
         )
+    }
+    
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redMeasure:
+                redMeasure.text = string(from: sliderForRed)
+            case greenMeasure:
+                greenMeasure.text = string(from: sliderForGreen)
+            default:
+                blueMeasure.text = string(from: sliderForBlue)
+            }
+        }
     }
     
     private func string(from slider: UISlider) -> String {
