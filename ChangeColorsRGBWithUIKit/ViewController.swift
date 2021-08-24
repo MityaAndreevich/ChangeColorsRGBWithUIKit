@@ -34,26 +34,28 @@ class ViewController: UIViewController {
         summarizeSliderValues()
     }
     //MARK: - IB Actions
-    @IBAction func changeColorForRed() {
-        redMeasure.text = String(format: "%.2f", sliderForRed.value)
+    @IBAction func changeColorForSliders() {
+        redMeasure.text = string(from: sliderForRed)
+        greenMeasure.text = string(from: sliderForGreen)
+        blueMeasure.text = string(from: sliderForBlue)
         summarizeSliderValues()
     }
     
-    @IBAction func changeColorForGreen() {
-        greenMeasure.text = String(format: "%.2f", sliderForGreen.value)
-        summarizeSliderValues()
-    }
-    
-    @IBAction func changeColorForBlue() {
-        blueMeasure.text = String(format: "%.2f", sliderForBlue.value)
-        summarizeSliderValues()
-    }
     //MARK: - Private Methods
     private func summarizeSliderValues() {
         let redValue = CGFloat(sliderForRed.value)
         let greenValue = CGFloat(sliderForGreen.value)
         let blueValue = CGFloat(sliderForBlue.value)
-        viewOfColor.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
+        viewOfColor.backgroundColor = UIColor(
+            red: redValue,
+            green: greenValue,
+            blue: blueValue,
+            alpha: 1
+        )
+    }
+    
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
