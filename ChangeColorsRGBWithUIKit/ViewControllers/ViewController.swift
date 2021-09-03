@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: - IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet weak var viewOfColor: UIView!
     
     @IBOutlet weak var redMeasure: UILabel!
@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderForRed: UISlider!
     @IBOutlet weak var sliderForGreen: UISlider!
     @IBOutlet weak var sliderForBlue: UISlider!
-    //MARK: - Override methods
+    
+    @IBOutlet weak var redTextField: UITextField!
+    @IBOutlet weak var greenTextField: UITextField!
+    @IBOutlet weak var blueTextField: UITextField!
+    
+    // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         viewOfColor.layer.cornerRadius = 15
@@ -28,22 +33,26 @@ class ViewController: UIViewController {
         sliderForBlue.value = 0
         
         setValue(for: redMeasure, greenMeasure, blueMeasure)
+        setValue(for: redTextField, greenTextField, blueTextField)
         summarizeSliderValues()
     }
-    //MARK: - IB Actions
+    // MARK: - IB Actions
     @IBAction func changeColorForSliders(_ sender: UISlider) {
         switch sender {
         case sliderForRed:
             redMeasure.text = string(from: sliderForRed)
+            redTextField.text = string(from: sliderForRed)
         case sliderForGreen:
             greenMeasure.text = string(from: sliderForGreen)
+            greenTextField.text = string(from: sliderForGreen)
         default:
             blueMeasure.text = string(from: sliderForBlue)
+            blueTextField.text = string(from: sliderForBlue)
         }
         summarizeSliderValues()
     }
     
-    //MARK: - Private Methods
+    // MARK: - Private Methods
     private func summarizeSliderValues() {
        
         viewOfColor.backgroundColor = UIColor(
@@ -63,6 +72,19 @@ class ViewController: UIViewController {
                 greenMeasure.text = string(from: sliderForGreen)
             default:
                 blueMeasure.text = string(from: sliderForBlue)
+            }
+        }
+    }
+    
+    private func setValue(for textF: UITextField...) {
+        textF.forEach { tField in
+            switch tField {
+            case redTextField:
+                redTextField.text = string(from: sliderForRed)
+            case greenTextField:
+                greenTextField.text = string(from: sliderForGreen)
+            default:
+                blueTextField.text = string(from: sliderForBlue)
             }
         }
     }
