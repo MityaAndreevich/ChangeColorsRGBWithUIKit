@@ -37,6 +37,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F625FD426E28C8700C5F04B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE525C26D02BD900D9B468 /* Main.storyboard */,
+				5FDE526126D02BDB00D9B468 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5F625FD526E28CA500C5F04B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE525A26D02BD900D9B468 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5F625FD626E28CD600C5F04B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE525F26D02BDB00D9B468 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5F625FD726E28CE800C5F04B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE525626D02BD900D9B468 /* AppDelegate.swift */,
+				5FDE525826D02BD900D9B468 /* SceneDelegate.swift */,
+				5FDE526426D02BDB00D9B468 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		5FDE524A26D02BD900D9B468 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +91,10 @@
 		5FDE525526D02BD900D9B468 /* ChangeColorsRGBWithUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				5FDE525626D02BD900D9B468 /* AppDelegate.swift */,
-				5FDE525826D02BD900D9B468 /* SceneDelegate.swift */,
-				5FDE525A26D02BD900D9B468 /* ViewController.swift */,
-				5FDE525C26D02BD900D9B468 /* Main.storyboard */,
-				5FDE525F26D02BDB00D9B468 /* Assets.xcassets */,
-				5FDE526126D02BDB00D9B468 /* LaunchScreen.storyboard */,
-				5FDE526426D02BDB00D9B468 /* Info.plist */,
+				5F625FD526E28CA500C5F04B /* ViewControllers */,
+				5F625FD426E28C8700C5F04B /* Storyboards */,
+				5F625FD726E28CE800C5F04B /* App */,
+				5F625FD626E28CD600C5F04B /* Resources */,
 			);
 			path = ChangeColorsRGBWithUIKit;
 			sourceTree = "<group>";
@@ -288,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLQ3BB6947;
-				INFOPLIST_FILE = ChangeColorsRGBWithUIKit/Info.plist;
+				INFOPLIST_FILE = ChangeColorsRGBWithUIKit/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLQ3BB6947;
-				INFOPLIST_FILE = ChangeColorsRGBWithUIKit/Info.plist;
+				INFOPLIST_FILE = ChangeColorsRGBWithUIKit/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
