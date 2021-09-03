@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  ChangeColorsRGBWithUIKit
 //
 //  Created by Dmitry Logachev on 20.08.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var viewOfColor: UIView!
     
