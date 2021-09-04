@@ -26,6 +26,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Public properties
     var startingVCbackgroundColor: UIColor!
     
+    // MARK: - Private properties
     private var red: CGFloat = 0
     private var green: CGFloat = 0
     private var blue: CGFloat = 0
@@ -64,6 +65,11 @@ class SettingsViewController: UIViewController {
         }
         summarizeSliderValues()
     }
+    
+    @IBAction func doneButtonPressed() {
+        dismiss(animated: true)
+    }
+    
     
     // MARK: - Private Methods
     private func summarizeSliderValues() {
