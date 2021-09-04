@@ -25,6 +25,7 @@ class SettingsViewController: UIViewController {
     
     // MARK: - Public properties
     var startingVCbackgroundColor: UIColor!
+    var delegate: SettingsViewControllerDelegate!
     
     // MARK: - Private properties
     private var red: CGFloat = 0
@@ -67,6 +68,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed() {
+        delegate.setNewBackgroundColor(for: viewOfColor.backgroundColor ?? UIColor.red)
         dismiss(animated: true)
     }
     
