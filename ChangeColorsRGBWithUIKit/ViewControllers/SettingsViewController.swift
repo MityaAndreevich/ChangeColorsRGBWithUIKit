@@ -75,7 +75,6 @@ class SettingsViewController: UIViewController {
     
     // MARK: - Private Methods
     private func summarizeSliderValues() {
-       
         viewOfColor.backgroundColor = UIColor(
             red: CGFloat(sliderForRed.value),
             green: CGFloat(sliderForGreen.value),
