@@ -51,6 +51,7 @@ class SettingsViewController: UIViewController {
         setValue(for: redTextField, greenTextField, blueTextField)
         summarizeSliderValues()
     }
+    
     // MARK: - IB Actions
     @IBAction func changeColorForSliders(_ sender: UISlider) {
         switch sender {
@@ -83,6 +84,14 @@ class SettingsViewController: UIViewController {
         )
     }
     
+    //private func summarizeTFvalues() {
+      //  viewOfColor.backgroundColor = UIColor(
+        //    red: CGFloat(float(from: redTextField)),
+          //  green: CGFloat(float(from: greenTextField)),
+            //blue: CGFloat(float(from: blueTextField)),
+            //alpha: 1)
+   // }
+    
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label {
@@ -108,13 +117,53 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-    
+        
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
     
+    //private func string(from textField: UITextField) -> String {
+      //  String(textField.text ?? "0")
+    //}
+    
+    private func float(from textField: UITextField) -> Float {
+        Float(textField.text ?? "0") ?? 0
+    }
+    
     private func getRGBComponents() {
-        startingVCbackgroundColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        startingVCbackgroundColor.getRed(&red,
+                                         green: &green,
+                                         blue: &blue,
+                                         alpha: &alpha)
+    }
+}
+
+//Mark: - Extensions
+extension SettingsViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case redTextField:
+            //redMeasure.text = string(from: redTextField)
+            sliderForRed.setValue(float(from: redTextField), animated: true)
+        case greenTextField:
+            // greenMeasure.text = string(from: greenTextField)
+            sliderForGreen.value = float(from: greenTextField)
+        default:
+            // blueMeasure.text = string(from: blueTextField)
+            sliderForBlue.value = float(from: blueTextField)
+        }
+        setValue(for: redMeasure, greenMeasure, blueMeasure)
+        summarizeSliderValues()
     }
 }
 
