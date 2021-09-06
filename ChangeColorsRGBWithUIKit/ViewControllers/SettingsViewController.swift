@@ -37,6 +37,10 @@ class SettingsViewController: UIViewController {
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        redTextField.delegate = self
+        greenTextField.delegate = self
+        blueTextField.delegate = self
+        
         viewOfColor.layer.cornerRadius = 15
         
         viewOfColor.backgroundColor = startingVCbackgroundColor
