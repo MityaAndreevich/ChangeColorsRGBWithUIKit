@@ -107,7 +107,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func float(from textField: UITextField) -> Float {
-        Float(textField.text ?? "0") ?? 0
+        Float(textField.text ?? "0") ?? -1
     }
     
     private func setSliders() {
@@ -138,6 +138,11 @@ extension SettingsViewController: UITextFieldDelegate {
         switch textField {
         case redTextField:
             sliderForRed.setValue(float(from: redTextField), animated: true)
+            if float(from: redTextField) > 1 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            } else if float(from: redTextField) < 0 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            }
         case greenTextField:
             sliderForGreen.setValue(float(from: greenTextField), animated: true)
         default:
