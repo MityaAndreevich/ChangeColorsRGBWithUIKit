@@ -65,7 +65,6 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    
     // MARK: - Private Methods
     private func summarizeSliderValues() {
         viewOfColor.backgroundColor = UIColor(
@@ -101,7 +100,7 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-        
+    
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
@@ -139,32 +138,17 @@ extension SettingsViewController: UITextFieldDelegate {
         guard let text = textField.text else { return }
         
         if let currentValue = Float(text) {
-        switch textField {
-        case redTextField:
-            sliderForRed.setValue(currentValue, animated: true)
-            if currentValue > 1 {
-                showAlert(title: "Alert!", message: "Incorrect values")
-            } else if currentValue < 0 {
-                showAlert(title: "Alert!", message: "Incorrect values")
+            switch textField {
+            case redTextField:
+                sliderForRed.setValue(currentValue, animated: true)
+                setValue(for: redMeasure)
+            case greenTextField:
+                sliderForGreen.setValue(currentValue, animated: true)
+                setValue(for: greenMeasure)
+            default:
+                sliderForBlue.setValue(currentValue, animated: true)
+                setValue(for: blueMeasure)
             }
-            setValue(for: redMeasure)
-        case greenTextField:
-            sliderForGreen.setValue(currentValue, animated: true)
-            if currentValue > 1 {
-                showAlert(title: "Alert!", message: "Incorrect values")
-            } else if currentValue < 0 {
-                showAlert(title: "Alert!", message: "Incorrect values")
-            }
-            setValue(for: greenMeasure)
-        default:
-            sliderForBlue.setValue(currentValue, animated: true)
-            if currentValue > 1 {
-                showAlert(title: "Alert!", message: "Incorrect values")
-            } else if currentValue < 0 {
-                showAlert(title: "Alert!", message: "Incorrect values")
-            }
-            setValue(for: blueMeasure)
-        }
             summarizeSliderValues()
             return
         }
