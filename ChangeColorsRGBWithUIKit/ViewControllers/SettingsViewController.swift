@@ -23,15 +23,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenTextField: UITextField!
     @IBOutlet weak var blueTextField: UITextField!
     
-    // MARK: - Public properties
+    // MARK: - Public Properties
     var startingVCbackgroundColor: UIColor!
     var delegate: SettingsViewControllerDelegate!
     
     // MARK: - Private properties
-    private var red: CGFloat = 0
-    private var green: CGFloat = 0
-    private var blue: CGFloat = 0
-    private var alpha: CGFloat = 1
+    
     
     
     // MARK: - Override methods
@@ -45,11 +42,7 @@ class SettingsViewController: UIViewController {
         
         viewOfColor.backgroundColor = startingVCbackgroundColor
         
-        getRGBComponents()
-        
-        sliderForRed.value = Float(red)
-        sliderForGreen.value = Float(green)
-        sliderForBlue.value = Float(blue)
+        setSliders()
         
         setValue(for: redMeasure, greenMeasure, blueMeasure)
         setValue(for: redTextField, greenTextField, blueTextField)
@@ -122,11 +115,12 @@ class SettingsViewController: UIViewController {
         Float(textField.text ?? "0") ?? 0
     }
     
-    private func getRGBComponents() {
-        startingVCbackgroundColor.getRed(&red,
-                                         green: &green,
-                                         blue: &blue,
-                                         alpha: &alpha)
+    private func setSliders() {
+        let ciColor = CIColor(color: startingVCbackgroundColor)
+        
+        sliderForRed.value = Float(ciColor.red)
+        sliderForGreen.value = Float(ciColor.green)
+        sliderForBlue.value = Float(ciColor.blue)
     }
 }
 
