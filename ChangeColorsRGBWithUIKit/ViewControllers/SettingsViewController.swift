@@ -106,10 +106,6 @@ class SettingsViewController: UIViewController {
         String(format: "%.2f", slider.value)
     }
     
-    private func float(from textField: UITextField) -> Float {
-        Float(textField.text ?? "0") ?? -1
-    }
-    
     private func setSliders() {
         let ciColor = CIColor(color: startingVCbackgroundColor)
         
@@ -135,21 +131,39 @@ extension SettingsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard let text = textField.text else { return }
+        
+        if let currentValue = Float(text) {
         switch textField {
         case redTextField:
-            sliderForRed.setValue(float(from: redTextField), animated: true)
-            if float(from: redTextField) > 1 {
+            sliderForRed.setValue(currentValue, animated: true)
+            if currentValue > 1 {
                 showAlert(title: "Alert!", message: "Incorrect values")
-            } else if float(from: redTextField) < 0 {
+            } else if currentValue < 0 {
                 showAlert(title: "Alert!", message: "Incorrect values")
             }
+            setValue(for: redMeasure)
         case greenTextField:
-            sliderForGreen.setValue(float(from: greenTextField), animated: true)
+            sliderForGreen.setValue(currentValue, animated: true)
+            if currentValue > 1 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            } else if currentValue < 0 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            }
+            setValue(for: greenMeasure)
         default:
-            sliderForBlue.setValue(float(from: blueTextField), animated: true)
+            sliderForBlue.setValue(currentValue, animated: true)
+            if currentValue > 1 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            } else if currentValue < 0 {
+                showAlert(title: "Alert!", message: "Incorrect values")
+            }
+            setValue(for: blueMeasure)
         }
-        setValue(for: redMeasure, greenMeasure, blueMeasure)
-        summarizeSliderValues()
+            summarizeSliderValues()
+            return
+        }
+        showAlert(title: "Alert!", message: "Wrong input format")
     }
 }
-
