@@ -88,14 +88,6 @@ class SettingsViewController: UIViewController {
         )
     }
     
-    //private func summarizeTFvalues() {
-      //  viewOfColor.backgroundColor = UIColor(
-        //    red: CGFloat(float(from: redTextField)),
-          //  green: CGFloat(float(from: greenTextField)),
-            //blue: CGFloat(float(from: blueTextField)),
-            //alpha: 1)
-   // }
-    
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label {
@@ -125,10 +117,6 @@ class SettingsViewController: UIViewController {
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
-    
-    //private func string(from textField: UITextField) -> String {
-      //  String(textField.text ?? "0")
-    //}
     
     private func float(from textField: UITextField) -> Float {
         Float(textField.text ?? "0") ?? 0
@@ -161,10 +149,10 @@ extension SettingsViewController: UITextFieldDelegate {
             sliderForRed.setValue(float(from: redTextField), animated: true)
         case greenTextField:
             // greenMeasure.text = string(from: greenTextField)
-            sliderForGreen.value = float(from: greenTextField)
+            sliderForGreen.setValue(float(from: greenTextField), animated: true)
         default:
             // blueMeasure.text = string(from: blueTextField)
-            sliderForBlue.value = float(from: blueTextField)
+            sliderForBlue.setValue(float(from: blueTextField), animated: true)
         }
         setValue(for: redMeasure, greenMeasure, blueMeasure)
         summarizeSliderValues()
