@@ -2,7 +2,7 @@
 //  StartingViewController.swift
 //  ChangeColorsRGBWithUIKit
 //
-//  Created by Дмитрий Логачёв on 04.09.2021.
+//  Created by Dmitry Logachev on 04.09.2021.
 //
 
 import UIKit

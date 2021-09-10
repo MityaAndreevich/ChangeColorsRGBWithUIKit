@@ -117,6 +117,13 @@ class SettingsViewController: UIViewController {
         sliderForGreen.value = Float(ciColor.green)
         sliderForBlue.value = Float(ciColor.blue)
     }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 //Mark: - Extensions
@@ -127,20 +134,13 @@ extension SettingsViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
         case redTextField:
-            //redMeasure.text = string(from: redTextField)
             sliderForRed.setValue(float(from: redTextField), animated: true)
         case greenTextField:
-            // greenMeasure.text = string(from: greenTextField)
             sliderForGreen.setValue(float(from: greenTextField), animated: true)
         default:
-            // blueMeasure.text = string(from: blueTextField)
             sliderForBlue.setValue(float(from: blueTextField), animated: true)
         }
         setValue(for: redMeasure, greenMeasure, blueMeasure)
