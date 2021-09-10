@@ -27,10 +27,6 @@ class SettingsViewController: UIViewController {
     var startingVCbackgroundColor: UIColor!
     var delegate: SettingsViewControllerDelegate!
     
-    // MARK: - Private properties
-    
-    
-    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +42,6 @@ class SettingsViewController: UIViewController {
         
         setValue(for: redMeasure, greenMeasure, blueMeasure)
         setValue(for: redTextField, greenTextField, blueTextField)
-        summarizeSliderValues()
     }
     
     // MARK: - IB Actions
@@ -66,7 +61,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed() {
-        delegate.setNewBackgroundColor(for: viewOfColor.backgroundColor ?? UIColor.red)
+        delegate.setNewBackgroundColor(for: viewOfColor.backgroundColor ?? .red)
         dismiss(animated: true)
     }
     
