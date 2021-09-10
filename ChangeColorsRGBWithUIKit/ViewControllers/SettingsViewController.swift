@@ -106,6 +106,10 @@ class SettingsViewController: UIViewController {
         String(format: "%.2f", slider.value)
     }
     
+    @objc private func tappedDone() {
+        view.endEditing(true)
+    }
+    
     private func setSliders() {
         let ciColor = CIColor(color: startingVCbackgroundColor)
         
@@ -165,5 +169,25 @@ extension SettingsViewController: UITextFieldDelegate {
             return
         }
         showAlert(title: "Alert!", message: "Wrong input format")
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        textField.inputAccessoryView = keyboardToolbar
+        
+        let doneButton = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(tappedDone)
+        )
+        
+        let flexBarButton = UIBarButtonItem(
+            barButtonSystemItem: .flexibleSpace,
+            target: nil,
+            action: nil
+        )
+        
+        keyboardToolbar.items = [flexBarButton, doneButton]
     }
 }
